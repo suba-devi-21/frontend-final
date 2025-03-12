@@ -19,7 +19,7 @@ export default function Myposts() {
     const fetchPost = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await axios.get("/api/post/myPosts", {
+        const response = await axios.get("https://backend-final-g75f.onrender.com/post/myPosts", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -35,7 +35,7 @@ export default function Myposts() {
   const handleDeletePost = async (postId) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`/api/post/deletepost/${postId}`, {
+      await axios.delete(`https://backend-final-g75f.onrender.com/post/deletepost/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
