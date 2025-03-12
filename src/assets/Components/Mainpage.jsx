@@ -17,7 +17,7 @@ export default function Mainpage() {
       const token = localStorage.getItem("token");
       try {
         const response = await axios.get(
-          "https://backend-final-g75f.onrender.com/post/allPosts",
+          "/api/post/allPosts",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ export default function Mainpage() {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.patch(
-        `https://backend-final-g75f.onrender.com/post/like/${postId}`,
+        `/api/post/like/${postId}`,
         {},
         {
           headers: {
@@ -72,7 +72,7 @@ export default function Mainpage() {
 
     try {
       
-      await axios.patch(`https://backend-final-g75f.onrender.com/post/comment/${postId}`, comment, {
+      await axios.patch(`/api/post/comment/${postId}`, comment, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -81,7 +81,7 @@ export default function Mainpage() {
       
       
       const response = await axios.get(
-        "https://backend-final-g75f.onrender.com/post/allPosts",
+        "/api/post/allPosts",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
