@@ -45,7 +45,7 @@ export default function Login() {
               onSubmit={(values, { setSubmitting }) => {
                 setSubmitting(true);
                 axios
-                  .post("/api/user/login", values)
+                  .post("https://backend-final-g75f.onrender.com/api/user/login", values)
                   .then((res) => {
                     const result = res.data;
                     console.log(result);
