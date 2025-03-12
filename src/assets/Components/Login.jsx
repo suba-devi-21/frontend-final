@@ -45,7 +45,7 @@ export default function Login() {
               onSubmit={(values, { setSubmitting }) => {
                 setSubmitting(true);
                 axios
-                  .post("/user/login", values)
+                  .post("/api/user/login", values)
                   .then((res) => {
                     const result = res.data;
                     console.log(result);

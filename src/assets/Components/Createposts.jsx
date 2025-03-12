@@ -23,7 +23,7 @@ export default function Createposts() {
         image,
       };
       const response = await axios.post(
-        "/post/createpost",
+        "/api/post/createpost",
         newPost,
         {
           headers: {

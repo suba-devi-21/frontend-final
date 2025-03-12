@@ -67,7 +67,7 @@ export default function Signin() {
                 onSubmit={(values, { setSubmitting }) => {
                   setSubmitting(true);
                   axios
-                    .post("/user/register", values)
+                    .post("/api/user/register", values)
                     .then((res) => {
                       const result = res.data;
                       if (result.message === "User Registered Successfully") {
