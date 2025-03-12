@@ -67,7 +67,7 @@ export default function Signin() {
                 onSubmit={(values, { setSubmitting }) => {
                   setSubmitting(true);
                   axios
-                    .post("https://backend-final-g75f.onrender.com/user/register", values)
+                    .post("/user/register", values)
                     .then((res) => {
                       const result = res.data;
                       if (result.message === "User Registered Successfully") {
