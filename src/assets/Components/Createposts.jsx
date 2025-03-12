@@ -23,7 +23,7 @@ export default function Createposts() {
         image,
       };
       const response = await axios.post(
-        "/api/post/createpost",
+        "https://backend-final-g75f.onrender.com/post/createpost",
         newPost,
         {
           headers: {
