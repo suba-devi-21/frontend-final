@@ -23,7 +23,7 @@ export default function Createposts() {
         image,
       };
       const response = await axios.post(
-        "https://suba-server.onrender.com/post/createpost",
+        "https://backend-final-3-g9lp.onrender.com/post/createpost",
         newPost,
         {
           headers: {

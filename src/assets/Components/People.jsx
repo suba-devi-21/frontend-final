@@ -12,7 +12,7 @@ export default function People() {
         if (!token) return;
 
         const response = await axios.get(
-          "https://suba-server.onrender.com/user/allUsers",
+          "https://backend-final-3-g9lp.onrender.com/user/allUsers",
           {
             headers: {
               Authorization: `Bearer ${token}`,
