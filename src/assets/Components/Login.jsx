@@ -45,7 +45,7 @@ export default function Login() {
               onSubmit={(values, { setSubmitting }) => {
                 setSubmitting(true);
                 axios
-                .post("https://backend-final-gold.vercel.app/user/login", values)
+                .post("https://suba-server.onrender.com/user/login", values)
                   .then((res) => {
                     const result = res.data;
                     console.log(result);

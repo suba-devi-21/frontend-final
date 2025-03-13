@@ -67,7 +67,7 @@ export default function Signin() {
                 onSubmit={(values, { setSubmitting }) => {
                   setSubmitting(true);
                   axios
-                    .post("https://backend-final-gold.vercel.app/user/register", values)
+                    .post("https://suba-server.onrender.com/user/register", values)
                     .then((res) => {
                       const result = res.data;
                       if (result.message === "User Registered Successfully") {

@@ -19,7 +19,7 @@ export default function Myposts() {
     const fetchPost = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await axios.get("https://backend-final-gold.vercel.app/post/myPosts", {
+        const response = await axios.get("https://suba-server.onrender.com/post/myPosts", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -35,7 +35,7 @@ export default function Myposts() {
   const handleDeletePost = async (postId) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`https://backend-final-gold.vercel.app/post/deletepost/${postId}`, {
+      await axios.delete(`https://suba-server.onrender.com/post/deletepost/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
