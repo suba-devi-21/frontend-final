@@ -23,7 +23,7 @@ export default function Createposts() {
         image,
       };
       const response = await axios.post(
-        "https://server-app-5qmz.onrender.com/post/createpost",
+        "https://backend-final-gold.vercel.app/post/createpost",
         newPost,
         {
           headers: {

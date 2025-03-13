@@ -12,7 +12,7 @@ export default function People() {
         if (!token) return;
 
         const response = await axios.get(
-          "https://server-app-5qmz.onrender.com/user/allUsers",
+          "https://backend-final-gold.vercel.app/user/allUsers",
           {
             headers: {
               Authorization: `Bearer ${token}`,

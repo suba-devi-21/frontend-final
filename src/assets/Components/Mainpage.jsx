@@ -17,7 +17,7 @@ export default function Mainpage() {
       const token = localStorage.getItem("token");
       try {
         const response = await axios.get(
-      "https://server-app-5qmz.onrender.com/post/allPosts",
+      "https://backend-final-gold.vercel.app/post/allPosts",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ export default function Mainpage() {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.patch(
-        `https://server-app-5qmz.onrender.com/post/like/${postId}`,
+        `https://backend-final-gold.vercel.app/post/like/${postId}`,
         {},
         {
           headers: {
@@ -72,7 +72,7 @@ export default function Mainpage() {
 
     try {
       
-      await axios.patch(`https://server-app-5qmz.onrender.com/post/comment/${postId}`, comment, {
+      await axios.patch(`https://backend-final-gold.vercel.app/post/comment/${postId}`, comment, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -81,7 +81,7 @@ export default function Mainpage() {
       
       
       const response = await axios.get(
-        "https://server-app-5qmz.onrender.com/post/allPosts",
+        "https://backend-final-gold.vercel.app/post/allPosts",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

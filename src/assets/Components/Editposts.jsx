@@ -19,7 +19,7 @@ export default function EditPost() {
       setLoading(true);
       const token = localStorage.getItem("token");
       try {
-        const response = await axios.get(`https://server-app-5qmz.onrender.com/post/get/${id}`, {
+        const response = await axios.get(`https://backend-final-gold.vercel.app/post/get/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -52,7 +52,7 @@ export default function EditPost() {
       };
       
       const response = await axios.patch(
-        `https://server-app-5qmz.onrender.com/post/editpost/${id}`,
+        `https://backend-final-gold.vercel.app/post/editpost/${id}`,
         updatedPost,
         {
           headers: {
